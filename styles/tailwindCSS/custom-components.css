@@ -1,0 +1,34 @@
+@layer components {
+  .nft-container {
+    @apply max-w-full 2xl:max-w-[1440px];
+    @apply m-auto;
+  }
+
+  .nft-offset-x {
+    @apply px-[15px] lg:px-[80px];
+  }
+
+  .nft-offset-left {
+    @apply pl-[15px] lg:pl-[80px];
+  }
+
+  .nft-offset-right {
+    @apply pr-[15px] lg:pr-[80px];
+  }
+
+  .title-hero {
+    @apply text-[60px] font-semibold leading-[75px] text-white;
+  }
+
+  .title-section {
+    @apply text-[50px] leading-[60px] text-white;
+  }
+
+  .text-color-white {
+    @apply text-main-secondary dark:text-white;
+  }
+
+  .text-color-secondary {
+    @apply text-white dark:text-main-secondary;
+  }
+}
