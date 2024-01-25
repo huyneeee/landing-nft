@@ -9,5 +9,6 @@
   "less.validate": false,
   "scss.validate": false,
   "prettier.jsxSingleQuote": false,
-  "prettier.singleQuote": false
+  "prettier.singleQuote": false,
+  "tailwindCSS.emmetCompletions": true
 }

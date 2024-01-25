@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "../styles/index.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import PublicLayout from "@/components/templates/PublicLayout";
+import { exo2Nd } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={exo2Nd.className}>
+        <PublicLayout>{children}</PublicLayout>
+      </body>
     </html>
   );
 }
