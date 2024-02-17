@@ -1,11 +1,11 @@
-import { IconSearch } from "@/assets/icons/IconSearch";
 import Button from "@/components/atoms/Button";
-import IconButton from "@/components/atoms/IconButton";
 import { Navigations, Routers } from "@/config/routers";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Search from "./Search";
+import ToggleTheme from "./ToggleTheme";
 
 const Header = () => {
   return (
@@ -15,9 +15,7 @@ const Header = () => {
           <Image src="/icons/logo.svg" alt="logo" width={50} height={45} />
           <p className="text-color-white text-[23px] font-bold leading-[27px]">NFTs</p>
 
-          <IconButton className="ml-[50px] h-[55px] w-[55px]">
-            <IconSearch />
-          </IconButton>
+          <Search />
         </div>
 
         <nav>
@@ -48,9 +46,7 @@ const Header = () => {
             Create Account
           </Button>
 
-          <IconButton>
-            <Image src="/icons/icon-sun.svg" alt="icon" width={30} height={30} />
-          </IconButton>
+          <ToggleTheme />
         </div>
       </div>
     </header>

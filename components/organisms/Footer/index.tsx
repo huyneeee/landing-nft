@@ -8,7 +8,7 @@ import StarVote from "@/components/molecules/StarVote";
 
 const OurAPP = () => {
   return (
-    <div className="our-app mt-auto flex gap-[10px]">
+    <div className="our-app relative z-10 mt-auto flex gap-[10px]">
       <div className="flex h-[170px] w-[140px] flex-col items-center justify-center gap-[15px] rounded-t-full bg-white px-[28px]">
         <Image src="/images/apple-store.png" alt="img" width={68} height={38} />
         <StarVote number={4} persitFill="#FEB705" />
@@ -40,8 +40,8 @@ const OurAPP = () => {
 const QRCode = () => {
   return (
     <div className="qr-code h-full w-[270px] translate-y-5 rounded-[24px] border-[5px] border-b-0 border-[#dadadc] px-[37px] py-[40px] dark:border-main-primary">
-      <div className="relative h-[180px] w-full rounded-2xl">
-        <Image src="/icons/qrcode.svg" alt="qr-code" fill className="aspect-square" />
+      <div className="relative h-[180px] w-full overflow-hidden rounded-2xl shadow-creator-light">
+        <Image src="/icons/qrcode.svg" alt="qr-code" fill className="aspect-square " />
       </div>
       <h4
         className={clsx(
@@ -59,7 +59,9 @@ const Footer = () => {
   return (
     <section className="footer-nft flex flex-col">
       <div className="top-footer relative h-[350px] w-full overflow-hidden">
-        <div className="absolute left-0 top-0 h-[350px] w-full translate-y-[60px] skew-y-[-2deg] rounded-[40px] bg-[#edeeee] dark:bg-[#0f0f0f]"></div>
+        <div className="absolute left-0 top-0 h-[350px] w-full translate-y-[60px] skew-y-[-2deg] overflow-hidden rounded-[40px] bg-[#edeeee] dark:bg-[#0f0f0f]">
+          <div className="dust absolute right-0 top-0 h-[287px] w-[292px] rounded-[292px] bg-dust-main-hero blur-[197px]" />
+        </div>
         <div className="nft-container nft-offset-x relative z-10 flex h-full items-center justify-between">
           <QRCode />
           <div className="ml-[87px] flex flex-col pt-[30px]">
@@ -94,13 +96,12 @@ const Footer = () => {
           </div>
 
           <OurAPP />
-          <div className="dust absolute right-0 top-0 h-[287px] w-[292px] rounded-[292px] bg-dust-main-hero blur-[197px]" />
         </div>
       </div>
 
-      <footer className="footer bg-[#f2f3f3] py-[70px] dark:bg-[#0e131d]">
+      <footer className="footer overflow-hidden bg-[#f2f3f3] py-[70px] dark:bg-[#0e131d]">
         <div className="nft-container nft-offset-x flex justify-between">
-          <div className="col-1 flex flex-col">
+          <div className="col-1 relative flex flex-col">
             <div className="logo flex items-center gap-[13px]">
               <Image src="/icons/logo.svg" alt="logo" width={70} height={70} />
               <p className="text-[43px] font-bold text-main-secondary dark:text-white">NFTs</p>
@@ -110,6 +111,7 @@ const Footer = () => {
               Join NFTs Community
             </h5>
             <ListIconSocial />
+            <div className="dust absolute right-0 top-0 h-[219px] w-[232px] rounded-[292px] bg-dust-main-hero blur-[197px]" />
           </div>
 
           <div className="col-2 flex flex-col">

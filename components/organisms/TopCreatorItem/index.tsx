@@ -12,7 +12,7 @@ const TopCreatorItem = () => {
         alt="img"
         width={270}
         height={110}
-        className="h-[110px] rounded-[12px] object-cover"
+        className="h-[110px] w-[270px] rounded-[12px] object-cover"
       />
 
       <div className="mx-auto flex -translate-y-[42px] flex-col items-center gap-[10px]">

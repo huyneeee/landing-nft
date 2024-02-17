@@ -30,7 +30,9 @@ const config: Config = {
       boxShadow: {
         "popular-collection-dark": "0px 10px 40px 0px rgba(0, 0, 0, 0.07)",
         "popular-collection-light": "0px 10px 40px 0px rgba(0, 0, 0, 0.06)",
-        "creator-light": "20px 14px 60px 0px rgba(0, 0, 0, 0.10)"
+        "creator-light": "20px 14px 60px 0px rgba(0, 0, 0, 0.10)",
+        "card-slider": "20px 14px 60px rgba(0, 0, 0, 0.15)",
+        "feedback-item": "20px 14px 60px 0px rgba(0, 0, 0, 0.05)"
       }
     }
   },

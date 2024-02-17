@@ -2,8 +2,10 @@ import BottomMainHero from "./BottomMainHero";
 import MainHero from "./MainHero";
 import TopProduct from "./TopProduct/TopProduct";
 import ExploreCategories from "./ExploreCategories";
-import PopularCollections from "./PopularCollections";
 import SubscribeSection from "@/components/organisms/SubcribeSection";
+import SectionJoinCommunity from "@/components/organisms/SectionJoinCommunity";
+import React from "react";
+import PopularCollections from "@/components/organisms/PopularCollections";
 
 const HomePage = () => {
   return (
@@ -14,6 +16,7 @@ const HomePage = () => {
       <ExploreCategories />
       <PopularCollections />
       <SubscribeSection />
+      <SectionJoinCommunity />
     </main>
   );
 };

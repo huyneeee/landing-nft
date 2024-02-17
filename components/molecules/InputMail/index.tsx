@@ -18,7 +18,7 @@ const InputMail = () => {
         placeholder="Enter Your Mail"
         className="grow bg-[#cbd1d1] py-[42px] pl-[57px] text-[30px] leading-[36px] text-main-secondary outline-none dark:bg-[#3f494e]"
       />
-      <IconButton className="m-[20px] h-[80px] w-[80px] bg-main-primary">
+      <IconButton className="m-[20px] h-[80px] w-[80px] !bg-main-primary">
         <IconArrowRight />
       </IconButton>
     </div>
