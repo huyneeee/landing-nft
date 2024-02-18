@@ -1,9 +1,12 @@
 import clsx from "clsx";
 import Image from "next/image";
-import React from "react";
+import { ReactNode } from "react";
 
 type PropsTextCircle = {
   size?: number;
+  children?: ReactNode;
+  outerClass?: string;
+  innerClass?: string;
 };
 
 const WIDTH_ITEM = 20;
@@ -59,25 +62,29 @@ const Circle = ({
 };
 
 const TextCircle = (props: PropsTextCircle) => {
-  const { size = 150 } = props;
+  const { size = 150, outerClass, innerClass } = props;
   const txtCircle1 = "LIVE AUCTIONS NFTS LIVE AUCTIONS NFTS ";
   return (
     <div className="relative flex w-fit items-center justify-center">
-      <Circle size={size} text={txtCircle1} />
+      <Circle size={size} text={txtCircle1} className={innerClass} />
       <Circle
         size={size + BONUS}
         bonus={BONUS}
         text={txtCircle1}
         eccentricity={20}
-        className="text-[45px] leading-[54px]"
+        className={clsx("text-[45px] leading-[54px]", outerClass)}
       />
-      <Image
-        src="/images/monkey.png"
-        alt="image"
-        width={size}
-        height={size}
-        className="overflow-hidden rounded-full object-contain"
-      />
+      {!props.children ? (
+        <Image
+          src="/images/monkey.png"
+          alt="image"
+          width={size}
+          height={size}
+          className="overflow-hidden rounded-full object-contain"
+        />
+      ) : (
+        props.children
+      )}
     </div>
   );
 };
