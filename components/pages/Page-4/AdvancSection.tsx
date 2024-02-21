@@ -26,7 +26,7 @@ const DATA = [
 
 const AdvancSection = () => {
   return (
-    <section className="advance mt-[150px] pb-[100px]">
+    <section className="advance pb-[100px] dark:bg-main-secondary">
       <div className="nft-container nft-offset-x mb-[100px] flex justify-center gap-16">
         <div className="relative flex-1">
           <Image src="/images/subcribe.png" alt="img" width={682} height={529} />
