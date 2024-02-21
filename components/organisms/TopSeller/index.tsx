@@ -35,7 +35,7 @@ const DATA = [
 const TopSeller = () => {
   const [expand, setExpand] = useState(true);
   return (
-    <section className="top-seller py-[100px]">
+    <section className="top-seller py-[100px] dark:bg-main-secondary">
       <div className="nft-container nft-offset-x flex flex-col items-center justify-center">
         <div className="flex w-full justify-start">
           <h3 className={clsx(exo2Nd.className, "title-section text-color-white")}>Top Sellers</h3>
@@ -92,7 +92,7 @@ const TopSeller = () => {
                 key={idx}
                 className={
                   (exo2Nd.className,
-                  "text-color-white flex items-center justify-between border-b border-main-secondary pb-[23px] last:border-none")
+                  "text-color-white flex items-center justify-between border-b border-main-secondary pb-[23px] last:border-none dark:border-white")
                 }
               >
                 <p className="text-[24px] font-medium leading-[28px]">{item.name}</p>

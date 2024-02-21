@@ -2,12 +2,7 @@ import { IconArrowRight } from "@/assets/icons/IconArrowRight";
 import IconButton from "@/components/atoms/IconButton";
 import TextCircle from "@/components/molecules/TextCircle";
 import Image from "next/image";
-
-const DustBackground = () => {
-  return (
-    <div className="dust absolute -left-20 top-20 h-[287px] w-[292px] rounded-[292px] bg-dust-main-hero blur-[197px]" />
-  );
-};
+import DustBackground from "./DustBackground";
 
 const LeftSide = () => {
   return (
@@ -63,7 +58,7 @@ const RightSide = () => {
 
 const MainHero = () => {
   return (
-    <section className="main-hero bg-white pb-4 pt-[115px] dark:bg-main-secondary">
+    <section className="main-hero bg-white pb-40 pt-[115px] dark:bg-main-secondary">
       <div className="nft-container nft-offset-x relative flex justify-between">
         <LeftSide />
         <RightSide />
