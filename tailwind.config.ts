@@ -18,6 +18,7 @@ const config: Config = {
         "max-lg": { max: "1023px" },
         "max-md": { max: "767px" },
         "max-sm": { max: "639px" },
+        "min-sm": { min: "639px" },
         "2xl": "1440px"
       },
       backgroundImage: {

@@ -1,24 +1,46 @@
+"use client";
 import Button from "@/components/atoms/Button";
 import { Navigations, Routers } from "@/config/routers";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { useState } from "react";
+import DropdownsBox from "../DropdownsBox";
+import CloseDropdown from "./CloseDropdown";
 import Search from "./Search";
 import ToggleTheme from "./ToggleTheme";
 
-const Header = () => {
+const DropdownsActions = ({ onClick, open }: { onClick: () => void; open: boolean }) => {
   return (
-    <header className="bg-[#eef0f0] dark:bg-main-secondary ">
-      <div className="nft-container nft-offset-x flex items-center justify-between py-[30px]">
-        <div className="flex items-center gap-[14px]">
-          <Image src="/icons/logo.svg" alt="logo" width={50} height={45} />
-          <p className="text-color-white text-[23px] font-bold leading-[27px]">NFTs</p>
+    <>
+      <div className="max-sm:hidden">
+        <Search />
+      </div>
+      <div className="min-sm:hidden" onClick={onClick}>
+        {open ? <CloseDropdown /> : <Search />}
+      </div>
+    </>
+  );
+};
 
-          <Search />
+const Header = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleDropdownsAction = () => {
+    setOpen((prev) => !prev);
+  };
+  return (
+    <header className="bg-[#eef0f0] dark:bg-main-secondary">
+      <div className="nft-container nft-offset-x flex items-center justify-between py-[30px]">
+        <div className="flex items-center gap-[14px] max-sm:w-screen max-sm:justify-between">
+          <div className="flex items-center gap-[14px]">
+            <Image src="/icons/logo.svg" alt="logo" width={50} height={45} />
+            <p className="text-color-white text-[23px] font-bold leading-[27px]">NFTs</p>
+          </div>
+          <DropdownsActions onClick={handleDropdownsAction} open={open} />
         </div>
 
-        <nav>
+        <nav className="max-sm:hidden">
           <ul className="flex items-center gap-[30px]">
             {Navigations.map((nav, key) => (
               <li key={`nav-item-${key}`}>
@@ -35,7 +57,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-[65px]">
+        <div className="flex items-center gap-[65px] max-sm:hidden">
           <Link
             href={Routers.signIn}
             className="text-color-white text-center text-[18px] font-semibold leading-[20px]"
@@ -49,6 +71,7 @@ const Header = () => {
           <ToggleTheme />
         </div>
       </div>
+      <DropdownsBox open={open} setOpen={setOpen} />
     </header>
   );
 };
