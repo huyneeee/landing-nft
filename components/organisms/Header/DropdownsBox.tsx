@@ -1,18 +1,34 @@
+"use client";
 import Button from "@/components/atoms/Button";
 import { Navigations, Routers } from "@/config/routers";
 import clsx from "clsx";
 import Link from "next/link";
-import ToggleTheme from "../Header/ToggleTheme";
-import { Dispatch } from "react";
+import ToggleTheme from "./ToggleTheme";
+import { Dispatch, useEffect, useRef } from "react";
 
 type Props = {
   open?: boolean;
   setOpen?: Dispatch<React.SetStateAction<boolean>>;
 };
 
-const DropdownsBox = ({ open }: Props) => {
+const DropdownsBox = ({ open, setOpen }: Props) => {
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpen?.(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  });
+
   return (
     <div
+      ref={dropdownRef}
       className={clsx(
         "absolute z-10 mx-4 mt-2 flex w-[-webkit-fill-available] origin-top-right flex-col gap-20 rounded-md bg-[#F1F2F3] py-6 shadow-lg  focus:outline-none dark:bg-[#101A2E]",
         open ? "block" : "hidden"

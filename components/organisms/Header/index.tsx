@@ -5,30 +5,14 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import DropdownsBox from "../DropdownsBox";
 import CloseDropdown from "./CloseDropdown";
+import DropdownsBox from "./DropdownsBox";
 import Search from "./Search";
 import ToggleTheme from "./ToggleTheme";
-
-const DropdownsActions = ({ onClick, open }: { onClick: () => void; open: boolean }) => {
-  return (
-    <>
-      <div className="max-sm:hidden">
-        <Search />
-      </div>
-      <div className="min-sm:hidden" onClick={onClick}>
-        {open ? <CloseDropdown /> : <Search />}
-      </div>
-    </>
-  );
-};
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
-  const handleDropdownsAction = () => {
-    setOpen((prev) => !prev);
-  };
   return (
     <header className="bg-[#eef0f0] dark:bg-main-secondary">
       <div className="nft-container nft-offset-x flex items-center justify-between py-[30px]">
@@ -37,7 +21,12 @@ const Header = () => {
             <Image src="/icons/logo.svg" alt="logo" width={50} height={45} />
             <p className="text-color-white text-[23px] font-bold leading-[27px]">NFTs</p>
           </div>
-          <DropdownsActions onClick={handleDropdownsAction} open={open} />
+          <div className="flex gap-4">
+            <Search />
+            <div className="min-sm:hidden">
+              <CloseDropdown open={open} setOpen={setOpen} />
+            </div>
+          </div>
         </div>
 
         <nav className="max-sm:hidden">
