@@ -1,13 +1,12 @@
 "use client";
 import Button from "@/components/atoms/Button";
 import Avatar from "@/components/molecules/Avatar";
-import { useWindowSize } from "@/utils/helper";
 import Image from "next/image";
+import { useMedia } from "use-media";
 import IconButtonDot from "./IconButtonDot";
 
 const ProductItem = () => {
-  const { width } = useWindowSize();
-  const maxSm = (width as number) < 639;
+  const maxSm = useMedia({ maxWidth: 639 });
   return (
     <div className="category-item flex w-full flex-col rounded-[12px] border border-[#CCC] bg-white px-[20px] py-[25px] dark:border-none dark:bg-[#121721CC] max-sm:px-[12px] max-sm:py-0">
       <div className="flex items-center justify-between">

@@ -2,12 +2,12 @@
 import Button from "@/components/atoms/Button";
 import Avatar from "@/components/molecules/Avatar";
 import StarVote from "@/components/molecules/StarVote";
-import { useWindowSize } from "@/utils/helper";
+
 import Image from "next/image";
 import IconSocial from "./IconSocial";
+import { useMedia } from "use-media";
 const TopProduct = () => {
-  const { width } = useWindowSize();
-  const maxSm = (width as number) < 639;
+  const maxSm = useMedia({ maxWidth: 639 });
   return (
     <section className="top-product mt-[-362px] bg-[#f2f3f3] pt-[362px] dark:bg-[#141821] max-sm:mt-[-165px] max-sm:overflow-hidden max-sm:pt-[40px]">
       <div className="nft-container nft-offset-x relative flex items-stretch gap-[80px]">
