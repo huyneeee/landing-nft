@@ -2,11 +2,19 @@ import React from "react";
 
 type PropsIconHeart = {
   fill?: string;
+  width?: number;
+  height?: number;
 };
 
-export const IconHeart = ({ fill = "#D3F85A" }: PropsIconHeart) => {
+export const IconHeart = ({ fill = "#D3F85A", width = 28, height = 27 }: PropsIconHeart) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27" fill="none">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 28 27"
+      fill="none"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"

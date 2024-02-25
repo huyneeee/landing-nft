@@ -33,7 +33,7 @@ const ImageGroup = ({ width = 400, height = 530 }: { width?: number; height?: nu
 const BottomMainHero = () => {
   return (
     <section className="bottom-main-hero mt-[-260px] overflow-hidden bg-transparent pb-[92px]">
-      <div className="flex justify-center min-sm:hidden">
+      <div className="nft-offset-x flex justify-center min-sm:hidden">
         <ImageGroup width={113} height={150} />
       </div>
       <div className="nft-container flex items-center justify-between max-sm:hidden">
