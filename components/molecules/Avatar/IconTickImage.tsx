@@ -1,11 +1,21 @@
 "use client";
 import { IconTick } from "@/assets/icons/IconTick";
 import { useThemeCTX } from "@/contexts/ThemeCTX";
-import React from "react";
+import { PropsWithChildren } from "react";
 
-const IconTickImage = () => {
+type Props = {
+  size?: "small" | "large";
+};
+const IconTickImage = (props: PropsWithChildren<Props>) => {
   const { mode } = useThemeCTX();
-  return <IconTick fill={mode === "dark" ? "#040914" : "#fff"} />;
+  const { size = "large" } = props;
+  return (
+    <IconTick
+      width={size == "small" ? 4 : 11}
+      height={size == "small" ? 3 : 8}
+      fill={mode === "dark" ? "#040914" : "#fff"}
+    />
+  );
 };
 
 export default IconTickImage;

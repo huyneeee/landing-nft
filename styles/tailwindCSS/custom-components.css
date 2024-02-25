@@ -20,6 +20,10 @@
     @apply text-[60px] font-semibold leading-[75px] text-white;
   }
 
+  .title-hero-mobile {
+    @apply text-[48px] font-semibold leading-[65px];
+  }
+
   .title-section {
     @apply text-[50px] leading-[60px] text-white;
   }

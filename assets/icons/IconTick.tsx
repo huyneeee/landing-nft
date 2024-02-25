@@ -2,11 +2,19 @@ import React from "react";
 
 type PropsIconTick = {
   fill?: string;
+  width?: number;
+  height?: number;
 };
 
-export const IconTick = ({ fill = "#040914" }: PropsIconTick) => {
+export const IconTick = ({ fill = "#040914", width = 8, height = 8 }: PropsIconTick) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 11 8"
+      fill="none"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"

@@ -85,7 +85,7 @@ const ItemCard = ({ item, isActive }: { item: IDataItem; isActive: boolean }) =>
             {item.title}
           </h4>
           <div className="flex items-center gap-[28px]">
-            <StarVote />
+            <StarVote size="large" />
             <p
               className={clsx(
                 exo2Nd.className,

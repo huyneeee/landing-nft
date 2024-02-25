@@ -2,11 +2,19 @@ import React from "react";
 
 type PropsIconStar = {
   fill?: string;
+  width?: number;
+  height?: number;
 };
 
-export const IconStar = ({ fill = "#D3F85A" }: PropsIconStar) => {
+export const IconStar = ({ fill = "#D3F85A", width = 19, height = 18 }: PropsIconStar) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 19 18"
+      fill="none"
+    >
       <path
         d="M9.29262 0.449219L12.0221 5.9822L18.1273 6.86958L13.7093 11.1785L14.7515 17.2596L9.29262 14.3847L3.831 17.2555L4.87458 11.1745L0.456543 6.86823L6.56181 5.98085L9.29262 0.449219Z"
         fill={fill}

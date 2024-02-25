@@ -1,11 +1,10 @@
+import PopularCollections from "@/components/organisms/PopularCollections";
+import SectionJoinCommunity from "@/components/organisms/SectionJoinCommunity";
+import SubscribeSection from "@/components/organisms/SubcribeSection";
 import BottomMainHero from "./BottomMainHero";
+import ExploreCategories from "./ExploreCategories";
 import MainHero from "./MainHero";
 import TopProduct from "./TopProduct/TopProduct";
-import ExploreCategories from "./ExploreCategories";
-import SubscribeSection from "@/components/organisms/SubcribeSection";
-import SectionJoinCommunity from "@/components/organisms/SectionJoinCommunity";
-import React from "react";
-import PopularCollections from "@/components/organisms/PopularCollections";
 
 const HomePage = () => {
   return (
