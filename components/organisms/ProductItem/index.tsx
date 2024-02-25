@@ -4,20 +4,26 @@ import Avatar from "@/components/molecules/Avatar";
 import Image from "next/image";
 import { useMedia } from "use-media";
 import IconButtonDot from "./IconButtonDot";
+import { PropsWithChildren } from "react";
 
-const ProductItem = () => {
+type Props = {
+  imageUrl: string;
+  avatar: string;
+  name: string;
+  title: string;
+  desc: string;
+};
+
+const ProductItem = (props: PropsWithChildren<Props>) => {
+  const { imageUrl, name, title, desc, avatar } = props;
   const maxSm = useMedia({ maxWidth: 639 });
   return (
     <div className="category-item flex w-full flex-col rounded-[12px] border border-[#CCC] bg-white px-[20px] py-[25px] dark:border-none dark:bg-[#121721CC] max-sm:px-[12px] max-sm:py-0">
       <div className="flex items-center justify-between">
         <div className="wrapper-title flex items-center gap-[10px]">
-          <Avatar
-            tickSize={maxSm ? "small" : "large"}
-            src="/images/image-2.1.png"
-            size={!maxSm ? 50 : 25}
-          />
+          <Avatar tickSize={maxSm ? "small" : "large"} src={avatar} size={!maxSm ? 50 : 25} />
           <p className="text-[18px] font-semibold leading-[20px] text-main-secondary dark:text-white max-sm:text-nowrap max-sm:text-[10px]">
-            The Salvaro
+            {name}
           </p>
         </div>
         <IconButtonDot size={maxSm ? "small" : "large"} />
@@ -25,7 +31,7 @@ const ProductItem = () => {
 
       <div className="relative mt-[38px] h-[262px] w-full max-sm:mt-0 max-sm:h-[153px]">
         <Image
-          src="/images/image-3.png"
+          src={imageUrl}
           alt="img"
           fill
           className="overflow-hidden rounded-[12px] object-cover"
@@ -36,13 +42,11 @@ const ProductItem = () => {
       </div>
 
       <h4 className="mt-[12px] text-[26px] font-bold leading-normal text-main-secondary dark:text-white max-sm:text-[12px]">
-        Metaverse Game
+        {title}
         <span className="ml-3 text-[18px] font-bold leading-normal max-sm:text-[12px]">1/1</span>
       </h4>
 
-      <p className="text-[18px] text-main-secondary dark:text-white max-sm:text-[8px]">
-        Highest bid
-      </p>
+      <p className="text-[18px] text-main-secondary dark:text-white max-sm:text-[8px]">{desc}</p>
 
       <div className="bottom mt-[6px] flex items-center justify-between max-sm:pb-6">
         <p className="w-fit text-[20px] font-semibold text-main-secondary dark:text-main-primary max-sm:text-[10px]">

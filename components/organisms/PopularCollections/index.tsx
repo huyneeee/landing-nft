@@ -8,23 +8,53 @@ type PropsPopularCollections = {
   total?: number;
 };
 
-const PopularCollections = ({ total = 3 }: PropsPopularCollections) => {
+const DATA = [
+  {
+    avatar: "/images/user-6.png",
+    name: "Kristin Watson",
+    urls: {
+      1: "/images/col-1.1.png",
+      2: "/images/col-1.2.png",
+      3: "/images/col-1.3.png"
+    }
+  },
+  {
+    avatar: "/images/user-9.png",
+    name: "Kristin Watson",
+    urls: {
+      1: "/images/col-2.1.png",
+      2: "/images/col-2.2.png",
+      3: "/images/col-2.3.png"
+    }
+  },
+  {
+    avatar: "/images/user-12.png",
+    name: "Kristin Watson",
+    urls: {
+      1: "/images/col-3.1.png",
+      2: "/images/col-3.2.png",
+      3: "/images/col-3.3.png"
+    }
+  }
+];
+
+const PopularCollections = ({}: PropsPopularCollections) => {
   const CardList = useMemo(() => {
     return (
       <>
         <div className="grid grid-cols-3 gap-[30px] max-sm:hidden">
-          {new Array(total).fill(1).map((item, key) => (
+          {DATA.map((item, key) => (
             <React.Fragment key={key}>
-              <PopularCollection />
+              <PopularCollection data={item} />
             </React.Fragment>
           ))}
         </div>
         <div className="min-sm:hidden">
-          <PopularCollection />
+          <PopularCollection data={DATA[0]} />
         </div>
       </>
     );
-  }, [total]);
+  }, []);
 
   return (
     <section className="popular-collections bg-white py-[100px] dark:bg-main-secondary">
@@ -40,10 +70,10 @@ const PopularCollections = ({ total = 3 }: PropsPopularCollections) => {
         {CardList}
         <div className="mt-4 min-sm:hidden">
           <SwiperComponent
-            data={[1, 2, 3]}
+            data={DATA}
             watchSlidesProgress={true}
             slidesPerView={1.8}
-            itemRender={() => <PopularCollection isSwiperMode={true} />}
+            itemRender={(item) => <PopularCollection data={item} isSwiperMode={true} />}
           />
         </div>
       </div>

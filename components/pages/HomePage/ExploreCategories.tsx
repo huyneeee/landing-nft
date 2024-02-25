@@ -2,6 +2,51 @@ import Button from "@/components/atoms/Button";
 import ProductItem from "@/components/organisms/ProductItem";
 import React from "react";
 
+const DATA = [
+  {
+    imageUrl: "/images/image-3.png",
+    avatar: "/images/user-11.png",
+    name: "The Salvaro",
+    title: "Metaverse Game",
+    desc: "Highest bid"
+  },
+  {
+    imageUrl: "/images/user-10.1.png",
+    avatar: "/images/user-10.png",
+    name: "The Salvaro",
+    title: "Metaverse Game",
+    desc: "Highest bid"
+  },
+  {
+    imageUrl: "/images/image-5.png",
+    avatar: "/images/user-9.png",
+    name: "The Salvaro",
+    title: "Metaverse Game",
+    desc: "Highest bid"
+  },
+  {
+    imageUrl: "/images/image-2.png",
+    avatar: "/images/user-11.png",
+    name: "The Salvaro",
+    title: "Metaverse Game",
+    desc: "Highest bid"
+  },
+  {
+    imageUrl: "/images/image-6.png",
+    avatar: "/images/user-10.png",
+    name: "The Salvaro",
+    title: "Metaverse Game",
+    desc: "Highest bid"
+  },
+  {
+    imageUrl: "/images/image-2.2.png",
+    avatar: "/images/user-9.png",
+    name: "The Salvaro",
+    title: "Metaverse Game",
+    desc: "Highest bid"
+  }
+];
+
 const ExploreCategories = () => {
   return (
     <section className="explore-categories bg-white py-[100px] dark:bg-main-secondary">
@@ -16,9 +61,9 @@ const ExploreCategories = () => {
         </div>
 
         <div className="grid grid-cols-3 gap-[30px] max-sm:grid-cols-2 max-sm:gap-4">
-          {new Array(6).fill(1).map((item, key) => (
+          {DATA.map((item, key) => (
             <React.Fragment key={key}>
-              <ProductItem />
+              <ProductItem {...item} />
             </React.Fragment>
           ))}
         </div>
