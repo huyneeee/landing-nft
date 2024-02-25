@@ -7,7 +7,7 @@ import Image from "next/image";
 import IconSocial from "./IconSocial";
 const TopProduct = () => {
   const { width } = useWindowSize();
-  const maxSm = width < 639;
+  const maxSm = (width as number) < 639;
   return (
     <section className="top-product mt-[-362px] bg-[#f2f3f3] pt-[362px] dark:bg-[#141821] max-sm:mt-[-165px] max-sm:overflow-hidden max-sm:pt-[40px]">
       <div className="nft-container nft-offset-x relative flex items-stretch gap-[80px]">
@@ -32,7 +32,7 @@ const TopProduct = () => {
             Irradiation of Fake Yellow
           </h3>
           <div className="gap-[28px mt-[20px] flex items-center max-sm:mt-0 max-sm:gap-3">
-            <StarVote />
+            <StarVote size={maxSm ? "small" : "large"} />
             <p className="text-color-white text-[18px] font-semibold leading-[21px] max-sm:text-xs">
               Auction · 1 of 1 available · Highest bid
             </p>

@@ -2,17 +2,20 @@
 import { IconDot } from "@/assets/icons/IconDot";
 import IconButton from "@/components/atoms/IconButton";
 import { useThemeCTX } from "@/contexts/ThemeCTX";
-import { useWindowSize } from "@/utils/helper";
+import { PropsWithChildren } from "react";
 
-const IconButtonDot = () => {
+type Props = {
+  size?: "small" | "large";
+};
+
+const IconButtonDot = (props: PropsWithChildren<Props>) => {
+  const { size } = props;
   const { mode } = useThemeCTX();
-  const { width } = useWindowSize();
-  const maxSm = (width as number) < 639;
   return (
     <IconButton className="!bg-transparent max-sm:w-auto max-sm:justify-end">
       <IconDot
-        width={maxSm ? 12 : 25}
-        height={maxSm ? 3 : 5}
+        width={size == "small" ? 12 : 25}
+        height={size == "small" ? 3 : 5}
         fill={mode === "dark" ? "#fff" : "#040914"}
       />
     </IconButton>

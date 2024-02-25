@@ -9,10 +9,11 @@ type PropsAvatar = {
   className?: string;
   classNameIcon?: string;
   ticked?: boolean;
+  tickSize?: "small" | "large";
 };
 
 const Avatar = (props: PropsAvatar) => {
-  const { src, size = 50, className, classNameIcon, ticked = true } = props;
+  const { src, size = 50, className, classNameIcon, ticked = true, tickSize } = props;
   return (
     <div className="avatar relative w-fit">
       <Image
@@ -32,11 +33,12 @@ const Avatar = (props: PropsAvatar) => {
       {ticked && (
         <div
           className={clsx(
-            "absolute bottom-0 right-0 flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#4CAF50] dark:bg-main-primary max-sm:h-[10px] max-sm:w-[10px]",
-            classNameIcon
+            "absolute bottom-0 right-0 flex  items-center justify-center rounded-full bg-[#4CAF50] dark:bg-main-primary",
+            classNameIcon,
+            tickSize == "small" ? "h-[10px] w-[10px]" : "h-[20px] w-[20px]"
           )}
         >
-          <IconTickImage />
+          <IconTickImage size={tickSize} />
         </div>
       )}
     </div>

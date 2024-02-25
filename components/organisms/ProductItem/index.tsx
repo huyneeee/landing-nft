@@ -8,17 +8,20 @@ import IconButtonDot from "./IconButtonDot";
 const ProductItem = () => {
   const { width } = useWindowSize();
   const maxSm = (width as number) < 639;
-
   return (
     <div className="category-item flex w-full flex-col rounded-[12px] border border-[#CCC] bg-white px-[20px] py-[25px] dark:border-none dark:bg-[#121721CC] max-sm:px-[12px] max-sm:py-0">
       <div className="flex items-center justify-between">
         <div className="wrapper-title flex items-center gap-[10px]">
-          <Avatar src="/images/image-2.1.png" size={maxSm ? 25 : 50} />
+          <Avatar
+            tickSize={maxSm ? "small" : "large"}
+            src="/images/image-2.1.png"
+            size={!maxSm ? 50 : 25}
+          />
           <p className="text-[18px] font-semibold leading-[20px] text-main-secondary dark:text-white max-sm:text-nowrap max-sm:text-[10px]">
             The Salvaro
           </p>
         </div>
-        <IconButtonDot />
+        <IconButtonDot size={maxSm ? "small" : "large"} />
       </div>
 
       <div className="relative mt-[38px] h-[262px] w-full max-sm:mt-0 max-sm:h-[153px]">
