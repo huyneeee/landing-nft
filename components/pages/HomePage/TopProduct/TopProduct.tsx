@@ -2,26 +2,12 @@
 import Button from "@/components/atoms/Button";
 import Avatar from "@/components/molecules/Avatar";
 import StarVote from "@/components/molecules/StarVote";
-import { isClient } from "@/utils/contants";
+import { useWindowSize } from "@/utils/helper";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import IconSocial from "./IconSocial";
 const TopProduct = () => {
-  const [maxSm, setMaxSm] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      if (isClient()) {
-        setMaxSm(window.innerWidth < 639);
-      }
-    };
-    handleResize();
-    if (isClient()) {
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
+  const { width } = useWindowSize();
+  const maxSm = width < 639;
   return (
     <section className="top-product mt-[-362px] bg-[#f2f3f3] pt-[362px] dark:bg-[#141821] max-sm:mt-[-165px] max-sm:overflow-hidden max-sm:pt-[40px]">
       <div className="nft-container nft-offset-x relative flex items-stretch gap-[80px]">
@@ -30,7 +16,7 @@ const TopProduct = () => {
             <div className="flex items-center gap-[13px] rounded-[90px] bg-[#e0e2e2] p-[6px] pr-[26px] dark:bg-main-gray">
               <Avatar
                 src="/images/monkey.png"
-                size={maxSm ? 27 : 60}
+                size={!maxSm ? 60 : 27}
                 ticked={false}
                 className="h-[60px] w-[60px] max-sm:h-[27px] max-sm:w-[27px]"
               />

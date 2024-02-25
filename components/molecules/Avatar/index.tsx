@@ -27,12 +27,12 @@ const Avatar = (props: PropsAvatar) => {
           width: size,
           height: size
         }}
-        className="absolute left-0 top-0 rounded-full border border-white/50"
+        className="absolute left-0 top-0 rounded-full border border-white/50 max-sm:hidden"
       />
       {ticked && (
         <div
           className={clsx(
-            "absolute bottom-0 right-0 flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#4CAF50] dark:bg-main-primary",
+            "absolute bottom-0 right-0 flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#4CAF50] dark:bg-main-primary max-sm:h-[10px] max-sm:w-[10px]",
             classNameIcon
           )}
         >
