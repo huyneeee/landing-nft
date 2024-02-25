@@ -7,10 +7,21 @@ import { PropsWithChildren } from "react";
 
 type Props = {
   isSwiperMode?: boolean;
+  data: DataType;
+};
+
+type DataType = {
+  avatar: string;
+  name: string;
+  urls: {
+    1: string;
+    2: string;
+    3: string;
+  };
 };
 
 const PopularCollection = (props: PropsWithChildren<Props>) => {
-  const { isSwiperMode = false } = props;
+  const { isSwiperMode = false, data } = props;
   return (
     <div
       className={clsx(
@@ -20,7 +31,7 @@ const PopularCollection = (props: PropsWithChildren<Props>) => {
     >
       <div className="flex gap-[20px]">
         <Image
-          src="/images/image-1.png"
+          src={data.urls[1]}
           width={!isSwiperMode ? 230 : 125}
           height={!isSwiperMode ? 280 : 155}
           alt="img"
@@ -28,14 +39,14 @@ const PopularCollection = (props: PropsWithChildren<Props>) => {
         />
         <div className="flex flex-col gap-[10px]">
           <Image
-            src="/images/image-2.png"
+            src={data.urls[2]}
             width={!isSwiperMode ? 120 : 66}
             height={!isSwiperMode ? 135 : 74}
             alt="img"
             className="rounded-[4px] object-cover"
           />
           <Image
-            src="/images/image-3.png"
+            src={data.urls[3]}
             width={!isSwiperMode ? 120 : 66}
             height={!isSwiperMode ? 135 : 74}
             alt="img"
@@ -52,7 +63,7 @@ const PopularCollection = (props: PropsWithChildren<Props>) => {
       >
         <Avatar
           tickSize={isSwiperMode ? "small" : "large"}
-          src="/images/image-1.png"
+          src={data.avatar}
           className={clsx(
             "border-[2px] border-white",
             isSwiperMode ? "h-[40px] w-[40px]" : "h-[80px] w-[80px]"
@@ -66,7 +77,7 @@ const PopularCollection = (props: PropsWithChildren<Props>) => {
               isSwiperMode ? "flex whitespace-nowrap text-[12px]" : "text-[20px]"
             )}
           >
-            Kristin Watson
+            {data.name}
             {!isSwiperMode && <span className="pl-5 text-[12px] font-normal">(294)</span>}
           </h5>
           <div className="mt-[9px] max-sm:flex">
