@@ -42,7 +42,7 @@ const PopularCollections = ({ total = 3 }: PropsPopularCollections) => {
           <SwiperComponent
             data={[1, 2, 3]}
             watchSlidesProgress={true}
-            slidesPerView={1.7}
+            slidesPerView={1.8}
             itemRender={() => <PopularCollection isSwiperMode={true} />}
           />
         </div>

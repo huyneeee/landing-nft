@@ -21,8 +21,8 @@ const PopularCollection = (props: PropsWithChildren<Props>) => {
       <div className="flex gap-[20px]">
         <Image
           src="/images/image-1.png"
-          width={!isSwiperMode ? 230 : 130}
-          height={!isSwiperMode ? 280 : 160}
+          width={!isSwiperMode ? 230 : 125}
+          height={!isSwiperMode ? 280 : 155}
           alt="img"
           className="rounded-[4px] object-cover"
         />

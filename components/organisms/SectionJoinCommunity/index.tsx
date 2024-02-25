@@ -26,7 +26,7 @@ const SectionJoinCommunity = () => {
 
   return (
     <section className="join-community overflow-hidden bg-white dark:bg-[#050913]">
-      <div className="nft-container nft-offset-x flex items-center justify-center py-[100px]">
+      <div className="nft-container nft-offset-x flex items-center justify-center py-[100px] max-sm:pb-[400px]">
         <div
           style={{
             width: size,

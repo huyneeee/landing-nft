@@ -3,22 +3,9 @@ import InputMail from "@/components/molecules/InputMail";
 import Image from "next/image";
 import React from "react";
 
-const SubscribeImage = () => {
-  return (
-    <>
-      <div className="max-sm:hidden">
-        <Image src="/images/subcribe.png" alt="img" width={682} height={529} />
-      </div>
-      <div className="min-sm:hidden">
-        <Image src="/images/subcribe-mobile.png" alt="img" width={361} height={377} />
-      </div>
-    </>
-  );
-};
-
 const SubscribeSection = () => {
   return (
-    <section className="subscribe-section bg-[#f2f3f3] pb-[64px] dark:bg-[#0e131d] min-sm:pt-[108px]">
+    <section className="subscribe-section nft-offset-right bg-[#f2f3f3] pb-[64px] dark:bg-[#0e131d] min-sm:pt-[108px]">
       <div className="nft-container nft-offset-left flex items-center gap-[60px]">
         <div className="left flex flex-col pt-[54px]">
           <div className="absolute h-[371px] w-[371px] rounded-[371px] bg-dust-subcribe blur-[197px]"></div>
@@ -39,7 +26,9 @@ const SubscribeSection = () => {
           </div>
           <InputMail />
         </div>
-        <SubscribeImage />
+        <div className="max-sm:hidden">
+          <Image src="/images/subcribe.png" alt="img" width={682} height={529} />
+        </div>
       </div>
     </section>
   );
