@@ -11,7 +11,7 @@ const TopProduct = () => {
   return (
     <section className="top-product mt-[-362px] bg-[#f2f3f3] pt-[362px] dark:bg-[#141821] max-lg:mt-[-165px] max-lg:overflow-hidden max-lg:pt-[40px]">
       <div className="nft-container nft-offset-x relative flex items-stretch gap-[80px]">
-        <div className="min:sm:w-[578px] flex shrink-0 flex-col py-[73px] max-lg:relative max-lg:w-[-webkit-fill-available] max-lg:pb-[300px]">
+        <div className="min:sm:w-[578px] flex shrink-0 flex-col py-[73px] max-lg:relative max-lg:w-[-webkit-fill-available] max-lg:items-center  max-lg:pb-[300px] max-md:items-start">
           <div className="flex items-center max-lg:gap-6 min-lg:justify-between">
             <div className="flex items-center gap-[13px] rounded-[90px] bg-[#e0e2e2] p-[6px] pr-[26px] dark:bg-main-gray">
               <Avatar
@@ -107,7 +107,7 @@ const TopProduct = () => {
               Place a Bid
             </Button>
           </div>
-          <div className="absolute -right-[15px] bottom-0 grow overflow-hidden rounded-tl-[60px] min-lg:hidden">
+          <div className="absolute -right-[80px] bottom-0 grow overflow-hidden rounded-tl-[60px] max-md:-right-[15px] min-lg:hidden">
             <Image
               src="/images/image-4.png"
               width={297}
@@ -117,7 +117,7 @@ const TopProduct = () => {
             />
           </div>
         </div>
-        <div className="relative -right-[15px] grow overflow-hidden rounded-tl-[60px]">
+        <div className="max:md-right-[15px] relative -right-[80px] grow overflow-hidden rounded-tl-[60px]">
           <Image src="/images/image-4.png" alt="img" fill className="object-cover" />
         </div>
         <div className="dust absolute left-1/3 top-28 h-[287px] w-[292px] rounded-[292px] bg-dust-main-hero blur-[197px]" />

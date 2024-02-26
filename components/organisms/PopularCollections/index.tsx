@@ -3,6 +3,7 @@ import Button from "@/components/atoms/Button";
 import PopularCollection from "@/components/molecules/PopularColection";
 import React, { useMemo } from "react";
 import SwiperComponent from "../Swiper";
+import { useMedia } from "use-media";
 
 type PropsPopularCollections = {
   total?: number;
@@ -39,6 +40,7 @@ const DATA = [
 ];
 
 const PopularCollections = ({}: PropsPopularCollections) => {
+  const maxSm = useMedia({ maxWidth: 767 });
   const CardList = useMemo(() => {
     return (
       <>
@@ -49,7 +51,8 @@ const PopularCollections = ({}: PropsPopularCollections) => {
             </React.Fragment>
           ))}
         </div>
-        <div className="nft-offset-x min-lg:hidden">
+
+        <div className="nft-offset-x hidden max-md:block">
           <PopularCollection data={DATA[0]} />
         </div>
       </>
@@ -57,7 +60,7 @@ const PopularCollections = ({}: PropsPopularCollections) => {
   }, []);
 
   return (
-    <section className="popular-collections bg-white py-[50px] dark:bg-main-secondary sm:py-[100px] max-lg:pt-0">
+    <section className="popular-collections bg-white py-[50px] dark:bg-main-secondary sm:py-[100px]">
       <div className="nft-container min-lg:nft-offset-x">
         <div className="max-lg:nft-offset-x mb-[50px] flex items-center justify-between">
           <h4 className="text-color-white text-[50px] font-semibold leading-[60px] max-lg:text-[26px] max-lg:leading-8">
@@ -73,8 +76,10 @@ const PopularCollections = ({}: PropsPopularCollections) => {
             className="!px-4"
             data={DATA}
             watchSlidesProgress={true}
-            slidesPerView={1.7}
-            itemRender={(item) => <PopularCollection data={item} isSwiperMode={true} />}
+            slidesPerView={maxSm ? 1.7 : 2}
+            itemRender={(item) => (
+              <PopularCollection data={item} isSwiperMode={maxSm ? true : false} />
+            )}
           />
         </div>
       </div>

@@ -15,12 +15,12 @@ const config: Config = {
       screens: {
         "max-2xl": { max: "1439px" },
         "max-xl": { max: "1279px" },
-        "max-lg": { max: "1023px" },
+        "max-lg": { max: "1025px" },
         "max-md": { max: "767px" },
         "max-sm": { max: "639px" },
         "min-2xl": { min: "1439px" },
         "min-xl": { min: "1279px" },
-        "min-lg": { min: "1023px" },
+        "min-lg": { min: "1025px" },
         "min-md": { min: "767px" },
         "min-sm": { min: "639px" },
         "2xl": "1440px"

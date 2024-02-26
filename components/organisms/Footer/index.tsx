@@ -57,7 +57,7 @@ const QRCode = () => {
 
 const DowloadOurApp = () => {
   return (
-    <div className="ml-[87px] flex flex-col pt-[30px] max-lg:ml-0 max-lg:items-start max-lg:items-center">
+    <div className="ml-[87px] flex flex-col items-start pt-[30px] max-lg:ml-0 min-md:items-center">
       <h5 className="text-color-white text-[37px] leading-[44px]">Download</h5>
       <h6 className="text-color-white text-[34px] leading-[44px]">Our Mobile App</h6>
       <div className="mt-[40px] flex gap-[10px]">
