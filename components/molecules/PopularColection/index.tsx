@@ -26,13 +26,13 @@ const PopularCollection = (props: PropsWithChildren<Props>) => {
     <div
       className={clsx(
         "popular-collection rounded-[4px] bg-white shadow-popular-collection-light dark:bg-[#11161f] dark:shadow-popular-collection-dark",
-        isSwiperMode ? "mb-4 w-[215px]" : "w-[370px]"
+        isSwiperMode ? "mb-4 w-[215px]" : "min-sm:w-[370px]"
       )}
     >
-      <div className="flex gap-[20px]">
+      <div className={clsx("flex justify-between gap-[20px]")}>
         <Image
           src={data.urls[1]}
-          width={!isSwiperMode ? 230 : 125}
+          width={!isSwiperMode ? 230 : 130}
           height={!isSwiperMode ? 280 : 155}
           alt="img"
           className="rounded-[4px] object-cover"

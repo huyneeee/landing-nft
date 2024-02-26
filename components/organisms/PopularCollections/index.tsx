@@ -49,7 +49,7 @@ const PopularCollections = ({}: PropsPopularCollections) => {
             </React.Fragment>
           ))}
         </div>
-        <div className="min-sm:hidden">
+        <div className="nft-offset-x min-sm:hidden">
           <PopularCollection data={DATA[0]} />
         </div>
       </>
@@ -58,8 +58,8 @@ const PopularCollections = ({}: PropsPopularCollections) => {
 
   return (
     <section className="popular-collections bg-white py-[100px] dark:bg-main-secondary">
-      <div className="nft-container nft-offset-x">
-        <div className="mb-[50px] flex items-center justify-between">
+      <div className="nft-container min-sm:nft-offset-x">
+        <div className="max-sm:nft-offset-x mb-[50px] flex items-center justify-between">
           <h4 className="text-color-white text-[50px] font-semibold leading-[60px] max-sm:text-[26px] max-sm:leading-8">
             Popular Collections
           </h4>
@@ -70,9 +70,10 @@ const PopularCollections = ({}: PropsPopularCollections) => {
         {CardList}
         <div className="mt-4 min-sm:hidden">
           <SwiperComponent
+            className="!px-4"
             data={DATA}
             watchSlidesProgress={true}
-            slidesPerView={1.8}
+            slidesPerView={1.7}
             itemRender={(item) => <PopularCollection data={item} isSwiperMode={true} />}
           />
         </div>

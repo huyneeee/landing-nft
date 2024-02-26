@@ -21,7 +21,7 @@ const SubscribeSection = () => {
           <h3 className="mb-[63px] text-[50px] font-bold leading-[60px] text-main-secondary dark:text-white max-sm:mb-[30px] max-sm:text-[40px] max-sm:font-semibold max-sm:leading-[48px]">
             Subscribe Our Newsletter
           </h3>
-          <div className="mb-6 min-sm:hidden">
+          <div className="mb-6 flex justify-center min-sm:hidden">
             <Image src="/images/subcribe-mobile.png" alt="img" width={361} height={377} />
           </div>
           <InputMail />

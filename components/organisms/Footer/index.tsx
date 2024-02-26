@@ -73,7 +73,7 @@ const DowloadOurApp = () => {
 
 const FooterMobile = () => {
   return (
-    <div className="nft-container nft-offset-x absolute bottom-[67%] z-10 dark:bg-[#050913] max-sm:w-[-webkit-fill-available] min-sm:hidden">
+    <div className="nft-container nft-offset-x absolute bottom-[69%] z-10 dark:bg-[#050913] max-sm:w-[-webkit-fill-available] min-sm:hidden">
       <DowloadOurApp />
       <div className="mt-4 flex justify-center">
         <OurAPP />
@@ -136,7 +136,7 @@ const Footer = () => {
             <ListIconSocial className="max-sm:h-[50px] max-sm:w-[50px]" />
             <div className="dust absolute right-0 top-0 h-[219px] w-[232px] rounded-[292px] bg-dust-main-hero blur-[197px]" />
           </div>
-          <div className="flex gap-20 max-sm:mt-6">
+          <div className="flex gap-20 max-sm:mt-24">
             <Community />
             <Community />
           </div>
