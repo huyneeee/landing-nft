@@ -18,6 +18,10 @@ const config: Config = {
         "max-lg": { max: "1023px" },
         "max-md": { max: "767px" },
         "max-sm": { max: "639px" },
+        "min-2xl": { min: "1439px" },
+        "min-xl": { min: "1279px" },
+        "min-lg": { min: "1023px" },
+        "min-md": { min: "767px" },
         "min-sm": { min: "639px" },
         "2xl": "1440px"
       },

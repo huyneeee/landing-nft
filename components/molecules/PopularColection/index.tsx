@@ -26,7 +26,7 @@ const PopularCollection = (props: PropsWithChildren<Props>) => {
     <div
       className={clsx(
         "popular-collection mb-[35px] rounded-[4px] bg-white shadow-popular-collection-light dark:bg-[#11161f] dark:shadow-popular-collection-dark",
-        isSwiperMode ? "mb-4 w-[215px]" : "min-sm:w-[370px]"
+        isSwiperMode ? "mb-4 w-[215px]" : "min-lg:w-[370px]"
       )}
     >
       <div className={clsx("flex justify-between gap-[20px]")}>
@@ -80,7 +80,7 @@ const PopularCollection = (props: PropsWithChildren<Props>) => {
             {data.name}
             {!isSwiperMode && <span className="pl-5 text-[12px] font-normal">(294)</span>}
           </h5>
-          <div className="mt-[9px] max-sm:flex">
+          <div className="mt-[9px] max-lg:flex">
             <StarVote size={isSwiperMode ? "small" : "large"} />
             {isSwiperMode && <span className="pl-5 text-[12px] font-normal">(294)</span>}
           </div>

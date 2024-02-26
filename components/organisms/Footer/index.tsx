@@ -8,8 +8,8 @@ import ListIconSocial from "./ListIconSocial";
 
 const OurAPP = () => {
   return (
-    <div className="our-app relative z-10 mt-auto flex gap-[10px] max-sm:mt-4">
-      <div className="flex h-[170px] w-[140px] flex-col items-center justify-center gap-[15px] rounded-t-full bg-white px-[28px] max-sm:h-[145px] max-sm:w-[145px] max-sm:rounded-full max-sm:border-[5px]">
+    <div className="our-app relative z-10 mt-auto flex gap-[10px] max-lg:mt-4">
+      <div className="flex h-[170px] w-[140px] flex-col items-center justify-center gap-[15px] rounded-t-full bg-white px-[28px] max-lg:h-[145px] max-lg:w-[145px] max-lg:rounded-full max-lg:border-[5px]">
         <Image src="/images/apple-store.png" alt="img" width={68} height={38} />
         <StarVote number={4} persitFill="#FEB705" />
         <p
@@ -21,7 +21,7 @@ const OurAPP = () => {
           4.7/5
         </p>
       </div>
-      <div className="flex h-[170px] w-[140px] flex-col items-center justify-center gap-[15px] rounded-t-full bg-white px-[28px] max-sm:h-[145px] max-sm:w-[145px] max-sm:rounded-full max-sm:border-[5px]">
+      <div className="flex h-[170px] w-[140px] flex-col items-center justify-center gap-[15px] rounded-t-full bg-white px-[28px] max-lg:h-[145px] max-lg:w-[145px] max-lg:rounded-full max-lg:border-[5px]">
         <Image src="/images/ch-play.png" alt="img" width={34} height={37} />
         <StarVote number={4} persitFill="#FEB705" />
         <p
@@ -39,7 +39,7 @@ const OurAPP = () => {
 
 const QRCode = () => {
   return (
-    <div className="qr-code h-full w-[270px] translate-y-5 rounded-[24px] border-b-0 border-[#dadadc] px-[37px] py-[40px] dark:border-main-primary max-sm:mt-4 max-sm:border-[5px]">
+    <div className="qr-code h-full w-[270px] translate-y-5 rounded-[24px] border-b-0 border-[#dadadc] px-[37px] py-[40px] dark:border-main-primary max-lg:mt-4 max-lg:border-[5px]">
       <div className="relative h-[180px] w-full overflow-hidden rounded-2xl shadow-creator-light">
         <Image src="/icons/qrcode.svg" alt="qr-code" fill className="aspect-square " />
       </div>
@@ -57,7 +57,7 @@ const QRCode = () => {
 
 const DowloadOurApp = () => {
   return (
-    <div className="ml-[87px] flex flex-col pt-[30px] max-sm:ml-0">
+    <div className="ml-[87px] flex flex-col pt-[30px] max-lg:ml-0 max-lg:items-start max-lg:items-center">
       <h5 className="text-color-white text-[37px] leading-[44px]">Download</h5>
       <h6 className="text-color-white text-[34px] leading-[44px]">Our Mobile App</h6>
       <div className="mt-[40px] flex gap-[10px]">
@@ -73,7 +73,7 @@ const DowloadOurApp = () => {
 
 const FooterMobile = () => {
   return (
-    <div className="nft-container nft-offset-x absolute bottom-[69%] z-10 dark:bg-[#050913] max-sm:w-[-webkit-fill-available] min-sm:hidden">
+    <div className="nft-container nft-offset-x absolute bottom-[69%] z-10 dark:bg-[#050913] max-lg:w-[-webkit-fill-available] min-lg:hidden">
       <DowloadOurApp />
       <div className="mt-4 flex justify-center">
         <OurAPP />
@@ -109,21 +109,21 @@ const Community = () => {
 
 const Footer = () => {
   return (
-    <section className="footer-nft flex flex-col max-sm:relative">
+    <section className="footer-nft flex flex-col max-lg:relative">
       <FooterMobile />
       <div className="top-footer relative h-[350px] w-full overflow-hidden">
         <div className="absolute left-0 top-0 h-[350px] w-full translate-y-[60px] skew-y-[-2deg] overflow-hidden rounded-[40px] bg-[#edeeee] dark:bg-[#0f0f0f]">
           <div className="dust absolute right-0 top-0 h-[287px] w-[292px] rounded-[292px] bg-dust-main-hero blur-[197px]" />
         </div>
-        <div className="nft-container nft-offset-x relative z-10 flex h-full items-center justify-between max-sm:hidden">
+        <div className="nft-container nft-offset-x relative z-10 flex h-full items-center justify-between max-lg:hidden">
           <QRCode />
           <DowloadOurApp />
           <OurAPP />
         </div>
       </div>
 
-      <footer className="footer overflow-hidden bg-[#f2f3f3] py-[70px] dark:bg-[#0e131d] max-sm:z-[11]">
-        <div className="nft-container nft-offset-x flex gap-[20%] max-sm:flex-col">
+      <footer className="footer overflow-hidden bg-[#f2f3f3] py-[70px] dark:bg-[#0e131d] max-lg:z-[11]">
+        <div className="nft-container nft-offset-x flex gap-[20%] max-lg:flex-col">
           <div className="col-1 relative flex flex-col">
             <div className="logo flex items-center gap-[13px]">
               <Image src="/icons/logo.svg" alt="logo" width={70} height={70} />
@@ -133,10 +133,10 @@ const Footer = () => {
             <h5 className="mb-[22px] mt-[45px] text-[24px] font-semibold text-main-secondary dark:text-white">
               Join NFTs Community
             </h5>
-            <ListIconSocial className="max-sm:h-[50px] max-sm:w-[50px]" />
+            <ListIconSocial className="max-lg:h-[50px] max-lg:w-[50px]" />
             <div className="dust absolute right-0 top-0 h-[219px] w-[232px] rounded-[292px] bg-dust-main-hero blur-[197px]" />
           </div>
-          <div className="flex gap-20 max-sm:mt-24">
+          <div className="flex gap-20 max-lg:mt-24">
             <Community />
             <Community />
           </div>

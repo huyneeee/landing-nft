@@ -16,20 +16,20 @@ const Header = () => {
   return (
     <header className="bg-[#eef0f0] dark:bg-main-secondary">
       <div className="nft-container nft-offset-x flex items-center justify-between py-[30px]">
-        <div className="flex items-center gap-[14px] max-sm:w-screen max-sm:justify-between">
+        <div className="flex items-center gap-[14px] max-lg:w-screen max-lg:justify-between">
           <div className="flex items-center gap-[14px]">
             <Image src="/icons/logo.svg" alt="logo" width={50} height={45} />
             <p className="text-color-white text-[23px] font-bold leading-[27px]">NFTs</p>
           </div>
           <div className="flex gap-4">
             <Search />
-            <div className="min-sm:hidden">
+            <div className="min-lg:hidden">
               <CloseDropdown open={open} setOpen={setOpen} />
             </div>
           </div>
         </div>
 
-        <nav className="max-sm:hidden">
+        <nav className="max-lg:hidden">
           <ul className="flex items-center gap-[30px]">
             {Navigations.map((nav, key) => (
               <li key={`nav-item-${key}`}>
@@ -46,7 +46,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-[65px] max-sm:hidden">
+        <div className="flex items-center gap-[65px] max-lg:hidden">
           <Link
             href={Routers.signIn}
             className="text-color-white text-center text-[18px] font-semibold leading-[20px]"

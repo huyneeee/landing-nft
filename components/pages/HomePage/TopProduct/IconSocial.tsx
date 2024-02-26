@@ -16,7 +16,7 @@ const IconSocial = (props: PropsWithChildren<Props>) => {
   const { mode } = useThemeCTX();
   const fill = mode === "dark" ? "#D3F85A" : "#040914";
   return (
-    <div className="flex items-center gap-2 min-sm:gap-[20px]">
+    <div className="flex items-center gap-2 min-lg:gap-[20px]">
       <IconButton className={className}>
         <IconHeart width={isMobile ? 15 : 28} height={isMobile ? 15 : 27} fill={fill} />
       </IconButton>

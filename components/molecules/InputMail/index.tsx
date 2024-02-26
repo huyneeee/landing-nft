@@ -16,9 +16,9 @@ const InputMail = () => {
       <input
         ref={ref}
         placeholder="Enter Your Mail"
-        className="grow bg-[#cbd1d1] py-[42px] pl-[57px] text-[30px] leading-[36px] text-main-secondary outline-none dark:bg-[#3f494e] max-sm:py-0 max-sm:text-[20px] max-sm:leading-6"
+        className="grow bg-[#cbd1d1] py-[42px] pl-[57px] text-[30px] leading-[36px] text-main-secondary outline-none dark:bg-[#3f494e] max-lg:py-0 max-lg:text-[20px] max-lg:leading-6"
       />
-      <IconButton className="m-[20px] h-[80px] w-[80px] !bg-main-primary max-sm:m-2 max-sm:h-[46px] max-sm:w-[46px]">
+      <IconButton className="m-[20px] h-[80px] w-[80px] !bg-main-primary max-lg:m-2 max-lg:h-[46px] max-lg:w-[46px]">
         <IconArrowRight />
       </IconButton>
     </div>
