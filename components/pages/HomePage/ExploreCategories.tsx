@@ -49,7 +49,7 @@ const DATA = [
 
 const ExploreCategories = () => {
   return (
-    <section className="explore-categories bg-white py-[100px] dark:bg-main-secondary">
+    <section className="explore-categories bg-white py-[70px] dark:bg-main-secondary sm:py-[100px]">
       <div className="nft-container nft-offset-x">
         <div className="mb-[50px] flex items-center justify-between">
           <h4 className="text-color-white text-[50px] font-semibold leading-[60px] max-sm:text-[26px] max-sm:leading-8">
