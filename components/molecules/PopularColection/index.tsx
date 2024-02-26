@@ -25,7 +25,7 @@ const PopularCollection = (props: PropsWithChildren<Props>) => {
   return (
     <div
       className={clsx(
-        "popular-collection rounded-[4px] bg-white shadow-popular-collection-light dark:bg-[#11161f] dark:shadow-popular-collection-dark",
+        "popular-collection mb-[35px] rounded-[4px] bg-white shadow-popular-collection-light dark:bg-[#11161f] dark:shadow-popular-collection-dark",
         isSwiperMode ? "mb-4 w-[215px]" : "min-sm:w-[370px]"
       )}
     >

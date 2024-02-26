@@ -57,7 +57,7 @@ const PopularCollections = ({}: PropsPopularCollections) => {
   }, []);
 
   return (
-    <section className="popular-collections bg-white py-[100px] dark:bg-main-secondary">
+    <section className="popular-collections bg-white py-[50px] dark:bg-main-secondary sm:py-[100px] max-sm:pt-0">
       <div className="nft-container min-sm:nft-offset-x">
         <div className="max-sm:nft-offset-x mb-[50px] flex items-center justify-between">
           <h4 className="text-color-white text-[50px] font-semibold leading-[60px] max-sm:text-[26px] max-sm:leading-8">
