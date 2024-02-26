@@ -22,21 +22,21 @@ const Describe = () => {
 const ArtworkTotal = () => {
   return (
     <div className="max-sm:nft-offset-right flex items-center gap-[60px] max-sm:justify-center max-sm:gap-3">
-      <div className="flex flex-col max-sm:rounded-lg max-sm:bg-[#E0E7F3] max-sm:px-4 max-sm:py-2 dark:max-sm:bg-[#17253D] min-sm:gap-[20px]">
+      <div className="flex flex-col max-sm:rounded-lg max-sm:bg-[#E0E7F3] max-sm:px-3 max-sm:py-2 dark:max-sm:bg-[#17253D] min-sm:gap-[20px]">
         <h4 className="text-color-white text-[48px] font-bold leading-[46px] max-sm:text-[30px]">
           290K+
         </h4>
         <p className="text-color-white max-sm:[18px] text-[20px] font-normal">Artwork</p>
       </div>
 
-      <div className="flex flex-col max-sm:rounded-lg max-sm:bg-[#E0E7F3] max-sm:px-4 max-sm:py-2 dark:max-sm:bg-[#17253D] min-sm:gap-[20px]">
+      <div className="flex flex-col max-sm:rounded-lg max-sm:bg-[#E0E7F3] max-sm:px-3 max-sm:py-2 dark:max-sm:bg-[#17253D] min-sm:gap-[20px]">
         <h4 className="text-color-white text-[48px] font-bold leading-[46px] max-sm:text-[30px]">
           110K+
         </h4>
         <p className="text-color-white max-sm:[18px] text-[20px] font-normal">Artwork</p>
       </div>
 
-      <div className="flex flex-col max-sm:rounded-lg max-sm:bg-[#E0E7F3] max-sm:px-4 max-sm:py-2 dark:max-sm:bg-[#17253D] min-sm:gap-[20px]">
+      <div className="flex flex-col max-sm:rounded-lg max-sm:bg-[#E0E7F3] max-sm:px-3 max-sm:py-2 dark:max-sm:bg-[#17253D] min-sm:gap-[20px]">
         <h4 className="text-color-white text-[48px] font-bold leading-[46px] max-sm:text-[30px]">
           99K+
         </h4>
@@ -48,13 +48,13 @@ const ArtworkTotal = () => {
 
 const ButtonGroup = () => {
   return (
-    <div className="max-sm:nft-offset-right mt-[132px] flex items-center gap-[20px] max-sm:mt-10 max-sm:justify-center">
-      <Button className="!font-medium max-sm:text-nowrap max-sm:px-[35px] max-sm:text-[18px] max-sm:leading-5 min-sm:!font-bold">
+    <div className="max-sm:nft-offset-right mt-[132px] flex items-center gap-[20px] max-sm:mt-10 max-sm:justify-between">
+      <Button className="!font-medium max-sm:whitespace-nowrap max-sm:px-[22px] max-sm:text-[18px] max-sm:leading-5 min-sm:!font-bold">
         Start Collecting
       </Button>
       <Button
         color="outline"
-        className="px-[52px] !font-medium max-sm:text-nowrap max-sm:px-[35px] max-sm:text-[18px] max-sm:leading-5 min-sm:!font-bold"
+        className="px-[52px] !font-medium max-sm:whitespace-nowrap max-sm:px-[22px] max-sm:text-[18px] max-sm:leading-5 min-sm:!font-bold"
       >
         Create NFTs
       </Button>
@@ -64,7 +64,7 @@ const ButtonGroup = () => {
 
 const LeftSide = () => {
   return (
-    <div className="left-side min-sm:w-[527px] min-sm:shrink-0 min-sm:pt-[47px]">
+    <div className="left-side max-sm:overflow-hidden min-sm:w-[527px] min-sm:shrink-0 min-sm:pt-[47px]">
       <Title />
       <div className="min-sm:hidden">
         <ImageGroup width={205} height={208} />
