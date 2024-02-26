@@ -6,7 +6,7 @@ import { useThemeCTX } from "@/contexts/ThemeCTX";
 const IconButtonPlus = () => {
   const { mode } = useThemeCTX();
   return (
-    <IconButton className="!bg-transparent max-sm:w-auto max-sm:justify-end">
+    <IconButton className="!bg-transparent max-lg:w-auto max-lg:justify-end">
       <IconPlus color={mode === "dark" ? "#fff" : "#040914"} />
     </IconButton>
   );

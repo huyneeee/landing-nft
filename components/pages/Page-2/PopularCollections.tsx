@@ -17,7 +17,18 @@ const PopularCollections = () => {
         <div className="grid grid-cols-3 gap-[30px]">
           {new Array(6).fill(1).map((item, key) => (
             <React.Fragment key={key}>
-              <PopularCollection />
+              <PopularCollection
+                isSwiperMode={false}
+                data={{
+                  avatar: "",
+                  name: "",
+                  urls: {
+                    1: "",
+                    2: "",
+                    3: ""
+                  }
+                }}
+              />
             </React.Fragment>
           ))}
         </div>

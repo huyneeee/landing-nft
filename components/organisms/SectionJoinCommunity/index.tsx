@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { useMedia } from "use-media";
 
 const SectionJoinCommunity = () => {
-  const isMobile = useMedia({ maxWidth: 639 });
+  const isMobile = useMedia({ maxWidth: 1023 });
   const size = isMobile ? 600 : 1000;
 
   const configSizeDivOverplay = {
@@ -26,7 +26,7 @@ const SectionJoinCommunity = () => {
 
   return (
     <section className="join-community overflow-hidden bg-white dark:bg-[#050913]">
-      <div className="nft-container nft-offset-x flex items-center justify-center py-[100px] max-sm:pb-[400px]">
+      <div className="nft-container nft-offset-x flex items-center justify-center py-[100px] max-lg:pb-[400px]">
         <div
           style={{
             width: size,
@@ -52,20 +52,20 @@ const SectionJoinCommunity = () => {
             <div className="h-[80px] w-2/5 bg-white dark:bg-[#050913]"></div>
             <div className="h-[80px] w-2/3 bg-white dark:bg-[#050913]"></div>
           </div>
-          <div className="absolute left-[440px] top-[110px] z-20 max-sm:left-[200px] max-sm:top-[10px]">
+          <div className="absolute left-[440px] top-[110px] z-20 max-lg:left-[200px] max-lg:top-[10px]">
             <Avatar
               src="/images/user-10.png"
               ticked={false}
               size={isMobile ? 50 : 100}
-              className="h-[100px] w-[100px] max-sm:h-[50px] max-sm:w-[50px]"
+              className="h-[100px] w-[100px] max-lg:h-[50px] max-lg:w-[50px]"
             />
           </div>
-          <div className="absolute bottom-[110px] left-[440px] z-20 max-sm:bottom-[3rem] max-sm:left-[17rem]">
+          <div className="absolute bottom-[110px] left-[440px] z-20 max-lg:bottom-[3rem] max-lg:left-[17rem]">
             <Avatar
               src="/images/user-6.png"
               ticked={false}
               size={isMobile ? 50 : 100}
-              className="h-[100px] w-[100px] max-sm:h-[50px] max-sm:w-[50px]"
+              className="h-[100px] w-[100px] max-lg:h-[50px] max-lg:w-[50px]"
             />
           </div>
           <div className="absolute left-[-20px] top-[300px] z-20">
@@ -73,7 +73,7 @@ const SectionJoinCommunity = () => {
               src="/images/user-7.png"
               ticked={false}
               size={isMobile ? 50 : 100}
-              className="h-[100px] w-[100px] max-sm:h-[50px] max-sm:w-[50px]"
+              className="h-[100px] w-[100px] max-lg:h-[50px] max-lg:w-[50px]"
             />
           </div>
           <div className="absolute right-[140px] top-[50px] z-20">
@@ -81,7 +81,7 @@ const SectionJoinCommunity = () => {
               src="/images/user-8.png"
               ticked={false}
               size={isMobile ? 50 : 100}
-              className="h-[100px] w-[100px] max-sm:h-[50px] max-sm:w-[50px]"
+              className="h-[100px] w-[100px] max-lg:h-[50px] max-lg:w-[50px]"
             />
           </div>
           <div className="absolute bottom-[290px] right-[70px] z-20">
@@ -89,7 +89,7 @@ const SectionJoinCommunity = () => {
               src="/images/user-9.png"
               ticked={false}
               size={isMobile ? 50 : 100}
-              className="h-[100px] w-[100px] max-sm:h-[50px] max-sm:w-[50px]"
+              className="h-[100px] w-[100px] max-lg:h-[50px] max-lg:w-[50px]"
             />
           </div>
           <div className="absolute bottom-[320px] left-[70px] z-20 hidden">
@@ -97,25 +97,25 @@ const SectionJoinCommunity = () => {
               src="/images/user-10.png"
               ticked={false}
               size={isMobile ? 50 : 100}
-              className="h-[100px] w-[100px] max-sm:h-[50px] max-sm:w-[50px]"
+              className="h-[100px] w-[100px] max-lg:h-[50px] max-lg:w-[50px]"
             />
           </div>
 
           <div className="relative h-full w-full rounded-full border border-[#212A4D] p-[100px] dark:border-[4px] dark:border-[#121721]">
-            <div className="relative z-[11] flex h-full w-full flex-col items-center justify-center rounded-full border-[#212A4D] text-center dark:border-[4px] dark:border-[#121721] min-sm:border">
-              <h4 className="text-color-white text-[46px] font-semibold leading-[51px] max-sm:text-[30px] max-sm:leading-[36px] ">
+            <div className="relative z-[11] flex h-full w-full flex-col items-center justify-center rounded-full border-[#212A4D] text-center dark:border-[4px] dark:border-[#121721] min-lg:border">
+              <h4 className="text-color-white text-[46px] font-semibold leading-[51px] max-lg:text-[30px] max-lg:leading-[36px] ">
                 Join the Community
               </h4>
               <p
                 className={clsx(
                   exo2Nd.className,
-                  "text-color-white mb-[33px] mt-[8px] max-w-[568px] text-[20px] leading-[28px] max-sm:text-[16px] max-sm:leading-[25px]"
+                  "text-color-white mb-[33px] mt-[8px] max-w-[568px] text-[20px] leading-[28px] max-lg:text-[16px] max-lg:leading-[25px]"
                 )}
               >
                 We have a large scale group to support easth other in this game. Join ua to get the
                 news as soon as possible and follow our latest announcements
               </p>
-              <Button className="whitespace-nowrap max-sm:px-[22px] max-sm:py-2 max-sm:text-[16px] max-sm:font-semibold min-sm:!font-bold">
+              <Button className="whitespace-nowrap max-lg:px-[22px] max-lg:py-2 max-lg:text-[16px] max-lg:font-semibold min-lg:!font-bold">
                 Join Our Community
               </Button>
             </div>

@@ -17,7 +17,7 @@ const ExploreCategories = () => {
         <div className="grid grid-cols-3 gap-[30px]">
           {new Array(3).fill(1).map((item, key) => (
             <React.Fragment key={key}>
-              <ProductItem />
+              <ProductItem avatar="" name="" imageUrl="" title="" desc="" />
             </React.Fragment>
           ))}
         </div>

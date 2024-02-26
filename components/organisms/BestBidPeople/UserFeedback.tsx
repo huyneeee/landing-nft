@@ -42,7 +42,6 @@ const UserFeedback = () => {
         <SwiperComponent
           data={[1, 2, 3, 4, 5, 6]}
           spaceBetween={30}
-          autoWidth
           slidesPerView="auto"
           classNameSlider="!w-[567px]"
           wrapperClass="!py-[60px]"

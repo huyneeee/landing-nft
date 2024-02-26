@@ -28,7 +28,7 @@ const Avatar = (props: PropsAvatar) => {
           width: size,
           height: size
         }}
-        className="absolute left-0 top-0 rounded-full border border-white/50 max-sm:hidden"
+        className="absolute left-0 top-0 rounded-full border border-white/50 max-lg:hidden"
       />
       {ticked && (
         <div

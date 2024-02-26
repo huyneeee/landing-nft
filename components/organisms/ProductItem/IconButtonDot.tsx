@@ -12,7 +12,7 @@ const IconButtonDot = (props: PropsWithChildren<Props>) => {
   const { size } = props;
   const { mode } = useThemeCTX();
   return (
-    <IconButton className="!bg-transparent max-sm:w-auto max-sm:justify-end">
+    <IconButton className="!bg-transparent max-lg:w-auto max-lg:justify-end">
       <IconDot
         width={size == "small" ? 12 : 25}
         height={size == "small" ? 3 : 5}

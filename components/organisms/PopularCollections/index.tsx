@@ -3,6 +3,7 @@ import Button from "@/components/atoms/Button";
 import PopularCollection from "@/components/molecules/PopularColection";
 import React, { useMemo } from "react";
 import SwiperComponent from "../Swiper";
+import { useMedia } from "use-media";
 
 type PropsPopularCollections = {
   total?: number;
@@ -39,17 +40,19 @@ const DATA = [
 ];
 
 const PopularCollections = ({}: PropsPopularCollections) => {
+  const maxSm = useMedia({ maxWidth: 767 });
   const CardList = useMemo(() => {
     return (
       <>
-        <div className="grid grid-cols-3 gap-[30px] max-sm:hidden">
+        <div className="grid grid-cols-3 gap-[30px] max-lg:hidden">
           {DATA.map((item, key) => (
             <React.Fragment key={key}>
               <PopularCollection data={item} />
             </React.Fragment>
           ))}
         </div>
-        <div className="nft-offset-x min-sm:hidden">
+
+        <div className="nft-offset-x hidden max-md:block">
           <PopularCollection data={DATA[0]} />
         </div>
       </>
@@ -57,24 +60,26 @@ const PopularCollections = ({}: PropsPopularCollections) => {
   }, []);
 
   return (
-    <section className="popular-collections bg-white py-[50px] dark:bg-main-secondary sm:py-[100px] max-sm:pt-0">
-      <div className="nft-container min-sm:nft-offset-x">
-        <div className="max-sm:nft-offset-x mb-[50px] flex items-center justify-between">
-          <h4 className="text-color-white text-[50px] font-semibold leading-[60px] max-sm:text-[26px] max-sm:leading-8">
+    <section className="popular-collections bg-white py-[50px] dark:bg-main-secondary sm:py-[100px]">
+      <div className="nft-container min-lg:nft-offset-x">
+        <div className="max-lg:nft-offset-x mb-[50px] flex items-center justify-between">
+          <h4 className="text-color-white text-[50px] font-semibold leading-[60px] max-lg:text-[26px] max-lg:leading-8">
             Popular Collections
           </h4>
-          <Button className="max-sm:px-[22px] max-sm:py-2 max-sm:font-semibold min-sm:!font-bold">
+          <Button className="max-lg:px-[22px] max-lg:py-2 max-lg:font-semibold min-lg:!font-bold">
             See all
           </Button>
         </div>
         {CardList}
-        <div className="mt-4 min-sm:hidden">
+        <div className="mt-4 min-lg:hidden">
           <SwiperComponent
             className="!px-4"
             data={DATA}
             watchSlidesProgress={true}
-            slidesPerView={1.7}
-            itemRender={(item) => <PopularCollection data={item} isSwiperMode={true} />}
+            slidesPerView={maxSm ? 1.7 : 2}
+            itemRender={(item) => (
+              <PopularCollection data={item} isSwiperMode={maxSm ? true : false} />
+            )}
           />
         </div>
       </div>
